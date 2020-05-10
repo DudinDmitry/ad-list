@@ -1,11 +1,16 @@
 <?php
 
 
-namespace App\Http;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-public $timestamps=false;
+    public $timestamps = false;
+
+    public function ad()
+    {
+        return $this->hasMany('App\Ad');
+    }
 }

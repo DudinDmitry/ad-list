@@ -4,8 +4,8 @@
 namespace App\Http\Controllers;
 
 
-use App\Http\Ad;
-use App\Http\Category;
+use App\Ad;
+use App\Category;
 
 class mainController extends Controller
 {
@@ -20,6 +20,10 @@ class mainController extends Controller
     }
     public function category($id)
     {
-        dump(Ad::find($id)->category());
+        $ads=Category::find($id)->ad;
+        foreach ($ads as $ad) {
+            echo $ad->title.'<br>';
+        }
+
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +9,7 @@ class Ad extends Model
 {
     public function category()
     {
-        return $this->hasMany('App\Http\Category');
+        return $this->belongsTo('App\Category');
     }
 
 }
