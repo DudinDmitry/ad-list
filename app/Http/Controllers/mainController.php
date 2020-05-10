@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Ad;
 use App\Http\Category;
 
 class mainController extends Controller
@@ -16,5 +17,9 @@ class mainController extends Controller
         {
             echo $category->name.'<br>';
         }
+    }
+    public function category($id)
+    {
+        dump(Ad::find($id)->category());
     }
 }
