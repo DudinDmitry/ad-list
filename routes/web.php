@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'mainController@main');
+Route::get('/category/{id}','mainController@category')->where('id','[0-9]+');
