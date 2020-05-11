@@ -25,4 +25,13 @@
 
     </table><br>
 @endforeach
+<h2>Добавить новое объявление<br>В эту категорию</h2>
 
+
+<form method="post">
+    {{csrf_field()}}
+    <input type="text" name="title" placeholder="Заголовок"><br><br>
+    <input type="text" name="price" placeholder="Цена"><br><br>
+    <textarea name="description" placeholder="Описание"></textarea><br><br>
+    <input type="submit">
+</form>
